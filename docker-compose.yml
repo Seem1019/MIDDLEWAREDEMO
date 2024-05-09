@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  middlewaredemo:
+    image: middlewaredemo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
